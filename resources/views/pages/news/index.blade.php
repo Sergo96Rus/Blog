@@ -14,7 +14,6 @@
 	</section>
 	<!-- Page top end-->
 
-
 	<!-- Blog page -->
 	<section class="blog-page">
 		<div class="container">
@@ -26,33 +25,23 @@
 						<li><a href="#">Strategy</a></li>
 						<li><a href="#">Online</a></li>
 					</ul>
-					<div class="big-blog-item">
-						<img src="img/blog-big/1.jpg" alt="#" class="blog-thumbnail">
+                    
+                    @foreach ($news as $nw)
+                        <div class="big-blog-item">
+						<img src="{{ asset('storage/'.$nw->picture)}}" alt="#" class="blog-thumbnail">
 						<div class="blog-content text-box text-white">
 							<div class="top-meta">11.11.18  /  in <a href="">Games</a></div>
-							<h3>The best VR games on the market</h3>
-							<p>Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.....</p>
+							<h3>{{ $nw->heading }}</h3>
+							<p>{{ $nw->post }}</p>
 							<a href="#" class="read-more">Read More <img src="img/icons/double-arrow.png" alt="#"/></a>
 						</div>
 					</div>
-					<div class="big-blog-item">
-						<img src="img/blog-big/2.jpg" alt="#" class="blog-thumbnail">
-						<div class="blog-content text-box text-white">
-							<div class="top-meta">11.11.18  /  in <a href="">Games</a></div>
-							<h3>The best online game is out now!</h3>
-							<p>Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.....</p>
-							<a href="#" class="read-more">Read More <img src="img/icons/double-arrow.png" alt="#"/></a>
-						</div>
-					</div>
-					<div class="big-blog-item">
-						<img src="img/blog-big/3.jpg" alt="#" class="blog-thumbnail">
-						<div class="blog-content text-box text-white">
-							<div class="top-meta">11.11.18  /  in <a href="">Games</a></div>
-							<h3>The best online game is out now!</h3>
-							<p>Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.....</p>
-							<a href="#" class="read-more">Read More <img src="img/icons/double-arrow.png" alt="#"/></a>
-						</div>
-					</div>
+                    
+                    
+                    
+                    @endforeach
+
+					
 					<div class="site-pagination">
 						<a href="#" class="active">01.</a>
 						<a href="#">02.</a>
