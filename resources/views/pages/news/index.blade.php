@@ -33,7 +33,7 @@
 							<div class="top-meta">11.11.18  /  in <a href="">Games</a></div>
 							<h3>{{ $nw->heading }}</h3>
 							<p>{{ $nw->post }}</p>
-							<a href="#" class="read-more">Read More <img src="img/icons/double-arrow.png" alt="#"/></a>
+							<a href="{{ route('news.show', $nw->id) }}" class="read-more">Read More <img src="img/icons/double-arrow.png" alt="#"/></a>
 						</div>
 					</div>
                     
