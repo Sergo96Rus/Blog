@@ -10,7 +10,6 @@
     "require": {
         "php": "^7.2",
         "fideloper/proxy": "^4.0",
-        "klisl/laravel-comments": "^1.8",
         "laravel/framework": "^6.0",
         "laravel/nova": "*",
         "laravel/tinker": "^1.0",
