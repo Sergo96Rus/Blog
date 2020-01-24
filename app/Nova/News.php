@@ -26,5 +26,4 @@ class News extends Resource
             Textarea::make('post'),
         ];
     }
-    
 }

@@ -1,7 +1,6 @@
 @extends('layouts.layout')
 
-@section('content')
-
+@section('content') 
 	<!-- Blog page -->
 	<section class="blog-page">
 		<div class="container">
@@ -15,6 +14,14 @@
 							<p>{{ $news->post }}</p>
 						</div>
 					</div>
+                    @foreach($comments as $key => $comment)
+                    <div>
+                        <h4 style="color:white;">{{ $comment->login}}</h4>
+                        <p>{{ $comment->comment}}</p>
+                    </div>
+                    <hr>
+                    <br>
+                    @endforeach
 				</div>
 			</div>
 		</div>
