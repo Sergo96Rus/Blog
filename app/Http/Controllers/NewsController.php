@@ -36,7 +36,8 @@ class NewsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->input();
+        dd($data );
     }
 
     /**

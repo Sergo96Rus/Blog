@@ -7,7 +7,11 @@
 			<div class="row">
 				<div class="col-xl-9 col-lg-8 col-md-7">
 					<div class="big-blog-item">
-						<img src="{{ asset('storage/'. $news->picture) }}" alt="#" class="blog-thumbnail">
+						<!--<img src="{{ asset('storage/'. $news->picture) }}" alt="#" class="blog-thumbnail"> -->
+                        <br>
+                        <br>
+                        <br>
+                        <br>
 						<div class="blog-content text-box text-white">
 							<div class="top-meta">11.11.18  /  in <a href="">Games</a></div>
 							<h3>{{ $news->heading     }}</h3>
@@ -22,6 +26,15 @@
                     <hr>
                     <br>
                     @endforeach
+                    
+                    <form class="needs-validation" novalidate="" method="POST" action="{{ route('news.store') }}">
+                    @csrf
+                    <div class="mb-3">
+                        <label for="description"><span class="text-muted">Комментарий</span></label>
+                        <textarea name="comments" type="text" class="form-control" id="comments" placeholder="Коментарий">{{ old('comment') }}</textarea>
+                    </div>
+                    <button class="btn btn-primary btn-lg btn-block" type="submit">Добавить комментарий</button>
+                </form>
 				</div>
 			</div>
 		</div>

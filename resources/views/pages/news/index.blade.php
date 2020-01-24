@@ -28,7 +28,7 @@
                     
                     @foreach ($news as $nw)
                         <div class="big-blog-item">
-						<img src="{{ asset('storage/'.$nw->picture)}}" alt="#" class="blog-thumbnail">
+						<!-- <img src="{{ asset('storage/'.$nw->picture)}}" alt="#" class="blog-thumbnail"> -->
 						<div class="blog-content text-box text-white">
 							<div class="top-meta">11.11.18  /  in <a href="">Games</a></div>
 							<h3>{{ $nw->heading }}</h3>
